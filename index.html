@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordträning - Högskoleprovet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Header with stats -->
+        <header class="header">
+            <div class="stat streak">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <div class="stat-content">
+                    <span class="stat-value" id="streak-count">0</span>
+                    <span class="stat-label">dagars svit</span>
+                </div>
+            </div>
+            <div class="stat xp">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <div class="stat-content">
+                    <span class="stat-value" id="xp-count">0</span>
+                    <span class="stat-label">poäng</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Progress section -->
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="session-progress">0</span> / <span id="session-goal">20</span>
+            </div>
+        </div>
+
+        <!-- Main quiz area -->
+        <main class="quiz-area" id="quiz-area">
+            <!-- Question view -->
+            <div class="question-view" id="question-view">
+                <div class="word-card">
+                    <div class="word-display" id="word-display">laddar...</div>
+                    <div class="word-type" id="word-type"></div>
+                </div>
+
+                <div class="options" id="options">
+                    <!-- Options will be inserted by JS -->
+                </div>
+            </div>
+
+            <!-- Result view (hidden by default) -->
+            <div class="result-view hidden" id="result-view">
+                <div class="result-header" id="result-header">
+                    <span class="result-icon" id="result-icon">✓</span>
+                    <span class="result-text" id="result-text">Rätt!</span>
+                    <span class="result-xp" id="result-xp">+10 XP</span>
+                </div>
+
+                <div class="answer-card">
+                    <div class="answer-word" id="answer-word"></div>
+                    <div class="answer-correct">= <span id="correct-answer"></span></div>
+                </div>
+
+                <div class="info-section">
+                    <div class="info-block">
+                        <div class="info-label">Definition</div>
+                        <div class="info-content" id="definition"></div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-label">Ursprung</div>
+                        <div class="info-content" id="etymology"></div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-label">Exempel</div>
+                        <div class="info-content example" id="example"></div>
+                    </div>
+                </div>
+
+                <button class="next-button" id="next-button">Nästa ord</button>
+            </div>
+        </main>
+
+        <!-- Session complete view -->
+        <div class="complete-view hidden" id="complete-view">
+            <div class="complete-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h2>Dagens mål uppnått</h2>
+            <div class="complete-stats">
+                <div class="complete-stat">
+                    <span class="complete-value" id="final-correct">0</span>
+                    <span class="complete-label">rätt</span>
+                </div>
+                <div class="complete-stat">
+                    <span class="complete-value" id="final-total">0</span>
+                    <span class="complete-label">totalt</span>
+                </div>
+                <div class="complete-stat">
+                    <span class="complete-value" id="final-xp">0</span>
+                    <span class="complete-label">XP</span>
+                </div>
+            </div>
+            <button class="continue-button" id="continue-button">Fortsätt träna</button>
+        </div>
+
+        <!-- Level indicator -->
+        <div class="level-indicator">
+            <span class="level-label">Nivå:</span>
+            <span class="level-name" id="level-name">Nybörjare</span>
+        </div>
+    </div>
+
+    <!-- Confetti container -->
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
