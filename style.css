@@ -152,9 +152,9 @@ body {
 .word-card {
     background: var(--parchment);
     border-radius: var(--radius);
-    padding: 24px 20px;
+    padding: 14px 16px;
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.07),
         0 12px 24px rgba(0, 0, 0, 0.12),
@@ -175,12 +175,12 @@ body {
 
 .word-display {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: var(--ink);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     letter-spacing: -0.02em;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .word-type {
