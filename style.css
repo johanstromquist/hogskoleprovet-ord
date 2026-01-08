@@ -113,7 +113,7 @@ body {
 
 /* Progress Section */
 .progress-section {
-    margin-bottom: 28px;
+    margin-bottom: 16px;
 }
 
 .progress-bar {
@@ -152,9 +152,9 @@ body {
 .word-card {
     background: var(--parchment);
     border-radius: var(--radius);
-    padding: 40px 28px;
+    padding: 24px 20px;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     box-shadow:
         0 4px 6px rgba(0, 0, 0, 0.07),
         0 12px 24px rgba(0, 0, 0, 0.12),
@@ -194,14 +194,14 @@ body {
 .options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .option-button {
     background: var(--cream);
     border: 2px solid var(--stone);
     border-radius: var(--radius-sm);
-    padding: 16px 18px;
+    padding: 12px 14px;
     font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
